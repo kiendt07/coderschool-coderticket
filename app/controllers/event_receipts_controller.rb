@@ -1,0 +1,3 @@
+class EventReceiptsController < ApplicationController
+  
+end

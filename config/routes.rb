@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  root 'events#index'
+  devise_for :users
 
-  get '/upcoming' => 'events#index'
+  resources :receipts
 
   resources :events do
     resources :tickets
   end
+
+  resources :events do
+    resources :receipts, only: [:new, :create]
+  end
+
+  get '/upcoming' => 'events#index'
+
+  root 'events#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

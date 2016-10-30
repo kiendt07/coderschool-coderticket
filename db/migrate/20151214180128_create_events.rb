@@ -7,6 +7,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :hero_image_url
       t.text :extended_html_description
       t.references :category, index: true, foreign_key: true
+      t.references :user, index:true
       t.string :name
 
       t.timestamps null: false

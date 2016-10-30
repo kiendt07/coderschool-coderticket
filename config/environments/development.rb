@@ -43,4 +43,6 @@ Rails.application.configure do
   # For Vagrant box
   config.web_console.whitelisted_ips = '0.0.0.0/0'
   config.web_console.whiny_requests = false
+
+   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

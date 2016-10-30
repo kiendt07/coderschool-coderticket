@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h1>Booked</h1>
+  </div>
+
+  <div class="row">
+    <ul class="list-group">
+      <% @receipts.each do |r| %>
+        <li class="list-group-item">
+          <span class="tag tag-default tag-pill float-xs-right"><%= r.quantity %></span>
+          <%= r.ticket_type.event.name %>
+        </li>
+      <% end %>
+    </ul>
+
+  </div>
+</div>
