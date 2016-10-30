@@ -21,5 +21,11 @@ RSpec.describe "Events", type: :request do
       expect(response).to have_http_status(200)
       expect(response.body).to include 'Dam Vinh Hung'
     end
+
+    it 'has a book now button' do
+      event = create(:event)
+      get event_path(event)
+      expect(response.body).to include "<a href=\"/events/#{event.id}/tickets/new\">"
+    end
   end
 end

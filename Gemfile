@@ -63,5 +63,6 @@ group :development do
 end
 
 group :test do
+  gem 'capybara', '~> 2.10', '>= 2.10.1'
   gem 'rails-controller-testing'
 end
