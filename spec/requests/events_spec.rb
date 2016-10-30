@@ -12,4 +12,14 @@ RSpec.describe "Events", type: :request do
       expect(response.body).not_to include 'Dam Vinh Hung'
     end
   end
+
+  describe 'GET /events/:id' do
+    it 'receive the detail of an event' do
+      a = Event.create!(starts_at: 2.days.ago, ends_at: 1.days.ago, venue: Venue.new, category: Category.new, extended_html_description: 'abcd', name: 'Dam Vinh Hung')
+
+      get event_path(a.id)
+      expect(response).to have_http_status(200)
+      expect(response.body).to include 'Dam Vinh Hung'
+    end
+  end
 end
