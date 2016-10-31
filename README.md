@@ -2,10 +2,10 @@
 
 **Name of your app** is a Ruby on Rails application that allows users to create and buy tickets to cool events.
 
-- Submitted by: **Your Name Here**
-- Time spent: **X** hours
-- URL: **Insert your Heroku URL here**
-- SimpleCov Test Coverage: [coverage/index.html][coverage][index.html]
+- Submitted by: **Kien Do**
+- Time spent: **15** hours
+- URL: **https://coderticket-the-crap-version.herokuapp.com/**
+- SimpleCov Test Coverage: [coverage][/index.html]
 
 ## User Stories
 
