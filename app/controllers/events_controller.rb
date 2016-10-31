@@ -33,7 +33,7 @@ class EventsController < ApplicationController
 
   def publish
     @event = Event.find(params[:id])
-    @event.published_at ||= Time.now
+    @event.published_at = Time.now
     if @event.save
       flash[:success] = 'Published successfully'
       redirect_to events_path
