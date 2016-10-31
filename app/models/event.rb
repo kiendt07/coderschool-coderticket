@@ -10,4 +10,12 @@ class Event < ActiveRecord::Base
   def self.upcoming
     Event.where('ends_at > ?', Time.now)
   end
+
+  def published?
+    !published_at.nil?
+  end
+
+  def self.published
+    Event.where.not(published_at: nil)
+  end
 end

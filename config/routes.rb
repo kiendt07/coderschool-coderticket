@@ -2,13 +2,21 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :receipts
+  resources :events, only: [:edit, :update]
+
+  resources :events do
+    member do
+      post 'publish'
+    end
+    collection do
+      get 'mine'
+    end
+    resources :receipts, only: [:new, :create]
+  end
+
 
   resources :events do
     resources :tickets
-  end
-
-  resources :events do
-    resources :receipts, only: [:new, :create]
   end
 
   get '/upcoming' => 'events#index'

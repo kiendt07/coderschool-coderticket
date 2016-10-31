@@ -9,6 +9,9 @@
 @import "events";
 @import "tickets";
 
+@import 'bootstrap-datetimepicker';
+
+
 body {
   font-family: 'Open Sans';
 }
@@ -17,3 +20,12 @@ body {
   border: 2px solid rgb(241, 112, 91);
 }
 
+.alert {
+  position: absolute;
+  top: 10%;
+}
+
+.box {
+  width: 500px;
+  margin: 0 auto;
+}
